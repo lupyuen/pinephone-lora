@@ -63,12 +63,23 @@ void I2C_requested()
 
 # Probing LoRa Backplate with Bus Pirate
 
-Based on http://dangerousprototypes.com/docs/I2C
+Based on:
+
+-   http://dangerousprototypes.com/docs/I2C
+
+-   https://lupyuen.github.io/articles/i2c#appendix-test-bme280-with-bus-pirate
+
+Enter I2C mode, power on:
 
 ```text
 m
 I2C > HW > 400
 W
+```
+
+Scan I2C bus:
+
+```text
 (1)
 ```
 
