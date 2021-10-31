@@ -111,4 +111,3 @@ Read Address 0x28:
 ```text
 [0x51 r]
 ```
-
