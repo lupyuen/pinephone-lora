@@ -93,7 +93,7 @@ I2C scan results:
 TODO
 ```
 
-__Problem: Bus Pirate hangs while scanning. And address should be 0x28, not 0x00. Why?__
+__Problem: Bus Pirate hangs while scanning. And I2C Address of LoRa Backplate should be 0x28, not 0x00. Why?__
 
 Read Address 0x28:
 
@@ -107,7 +107,7 @@ Returns:
 TODO
 ```
 
-__Problem: Bus Pirate hangs while reading. Why?__
+__Problem: Bus Pirate hangs while reading from LoRa Backplate. Why?__
 
 TODO: Write and Read Address 0x28 Register 0x01:
 
