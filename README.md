@@ -1,5 +1,7 @@
 # Experimenting with LoRa Backplate for PinePhone
 
+![LoRa Backplate for PinePhone](https://lupyuen.github.io/images/pinephone-lora.jpg)
+
 Follow the updates on Twitter: https://twitter.com/MisterTechBlog/status/1454200499247349760
 
 Schematic and Firmware: https://wiki.pine64.org/wiki/Pinedio#Pinephone_backplate
@@ -85,11 +87,13 @@ Scan I2C bus:
 (1)
 ```
 
-Returns:
+I2C scan results:
 
 ```text
 TODO
 ```
+
+__Problem: Bus Pirate hangs while scanning. And address should be 0x28, not 0x00. Why?__
 
 Read Address 0x28:
 
@@ -102,6 +106,8 @@ Returns:
 ```text
 TODO
 ```
+
+__Problem: Bus Pirate hangs while reading. Why?__
 
 TODO: Write and Read Address 0x28 Register 0x01:
 
@@ -125,3 +131,5 @@ TODO: Enable pullup?
 ```text
 P
 ```
+
+![Probing LoRa Backplate with Bus Pirate](https://lupyuen.github.io/images/pinephone-probe.jpg)
