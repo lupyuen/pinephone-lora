@@ -48,7 +48,7 @@ void I2C_received(uint8_t bytes_recieved)
                 SPI_buffer[received_index++] = received_byte;
 ```
 
-When read, the bridge returns the bytes received from SPI:
+When the bridge receives a read command, it returns the bytes received from SPI:
 
 ```c
 void I2C_requested()
@@ -60,6 +60,8 @@ void I2C_requested()
     }
 }
 ```
+
+`usi` functions are defined here: https://github.com/zschroeder6212/tiny-i2c-spi/blob/master/src/USI_TWI_Slave.c
 
 # Probing LoRa Backplate with Bus Pirate
 
@@ -89,18 +91,6 @@ Enable pullup:
 P
 ```
 
-Read Address 0x28 Register 0x01:
-
-```text
-[0x50 0x01 0x00] [0x51 r]
-```
-
-Read Address 0x00 Register 0x01:
-
-```text
-[0x00 0x01 0x00] [0x01 r]
-```
-
 Read Address 0x01:
 ```text
 [0x01 r]
@@ -110,4 +100,16 @@ Read Address 0x28:
 
 ```text
 [0x51 r]
+```
+
+Write and Read Address 0x28 Register 0x01:
+
+```text
+[0x50 0x01 0x00] [0x51 r]
+```
+
+Write and Read Address 0x00 Register 0x01:
+
+```text
+[0x00 0x01 0x00] [0x01 r]
 ```
