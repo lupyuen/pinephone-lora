@@ -85,15 +85,10 @@ Scan I2C bus:
 (1)
 ```
 
-Enable pullup:
+Returns:
 
 ```text
-P
-```
-
-Read Address 0x01:
-```text
-[0x01 r]
+TODO
 ```
 
 Read Address 0x28:
@@ -102,14 +97,31 @@ Read Address 0x28:
 [0x51 r]
 ```
 
-Write and Read Address 0x28 Register 0x01:
+Returns:
+
+```text
+TODO
+```
+
+TODO: Write and Read Address 0x28 Register 0x01:
 
 ```text
 [0x50 0x01 0x00] [0x51 r]
 ```
 
-Write and Read Address 0x00 Register 0x01:
+TODO: Read Address 0x00?
+```text
+[0x01 r]
+```
+
+TODO: Write and Read Address 0x00 Register 0x01?
 
 ```text
 [0x00 0x01 0x00] [0x01 r]
+```
+
+TODO: Enable pullup?
+
+```text
+P
 ```
