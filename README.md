@@ -6,8 +6,6 @@ Schematic and Firmware: https://wiki.pine64.org/wiki/Pinedio#Pinephone_backplate
 
 PinePhone I2C Port: https://wiki.pine64.org/index.php/PinePhone#Pogo_pins
 
-Probing I2C with Bus Pirate: http://dangerousprototypes.com/docs/I2C
-
 # I2C-To-SPI Bridge
 
 From https://github.com/zschroeder6212/tiny-i2c-spi/blob/master/src/main.c
@@ -62,3 +60,44 @@ void I2C_requested()
     }
 }
 ```
+
+# Probing LoRa Backplate with Bus Pirate
+
+Based on http://dangerousprototypes.com/docs/I2C
+
+```text
+m
+I2C > HW > 400
+W
+(1)
+```
+
+Enable pullup:
+
+```text
+P
+```
+
+Read Address 0x28 Register 0x01:
+
+```text
+[0x50 0x01 0x00] [0x51 r]
+```
+
+Read Address 0x00 Register 0x01:
+
+```text
+[0x00 0x01 0x00] [0x01 r]
+```
+
+Read Address 0x01:
+```text
+[0x01 r]
+```
+
+Read Address 0x28:
+
+```text
+[0x51 r]
+```
+
