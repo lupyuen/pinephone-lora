@@ -214,13 +214,13 @@ Continue? [Y/n]
 70: -- -- -- -- -- -- -- --
 ```
 
-__Problem: `i2cdetect` fails to detect the I2C address of the LoRa Backplate. Why?__
+__Problem: `i2cdetect` fails to detect the I2C Address (x28) of the LoRa Backplate. Why?__
 
 Has the LoRa Backplate been flashed with the right firmware?
 
 I2C-To-SPI Bridge on ATtiny84: https://github.com/zschroeder6212/tiny-i2c-spi
 
-LoRa Backplate doesn't appear when we scan I2C Buses 0 to 5:
+LoRa Backplate (I2C Address 0x28) doesn't appear when we scan I2C Buses 0 to 5:
 
 ```bash
 [manjaro@manjaro-arm ~]$ sudo i2cdetect 0
