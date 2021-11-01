@@ -126,13 +126,15 @@ Searching I2C address space. Found devices at:
 
 __Problem: Bus Pirate hangs while scanning. And I2C Address of LoRa Backplate should be 0x28, not 0x00. Why?__
 
-Read Address 0x28:
+Read I2C Address 0x28:
 
 ```text
 [0x51 r]
 ```
 
-Returns:
+(Because 0x51 = 0x28 * 2 + 1)
+
+Result:
 
 ```text
 I2C START BIT
@@ -141,31 +143,35 @@ READ: 0x00
 NACK
 ```
 
-__Problem: Bus Pirate hangs while reading from LoRa Backplate. Why?__
+__Problem: Bus Pirate hangs while reading I2C Address 0x28 from LoRa Backplate. Why?__
 
-Read Address 0x20:
+Read I2C Address 0x20:
 
 ```text
 [0x41 r]
 ```
 
+(Because 0x41 = 0x20 * 2 + 1)
+
 Same problem as above.
 
-Read Address 0x00:
+Read I2C Address 0x00:
 
 ```text
 [0x01 r]
 ```
 
+(Because 0x01 = 0x00 * 2 + 1)
+
 Same problem as above.
 
-TODO: Write and Read Address 0x28 Register 0x01:
+TODO: Write and Read I2C Address 0x28 Register 0x01:
 
 ```text
 [0x50 0x01 0x00] [0x51 r]
 ```
 
-TODO: Write and Read Address 0x00 Register 0x01?
+TODO: Write and Read I2C Address 0x00 Register 0x01?
 
 ```text
 [0x00 0x01 0x00] [0x01 r]
