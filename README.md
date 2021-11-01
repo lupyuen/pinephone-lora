@@ -20,9 +20,11 @@ LoRa Backplate for PinePhone consists of...
 
 Schematic: https://wiki.pine64.org/wiki/Pinedio#Pinephone_backplate
 
+Let's probe the LoRa Backplate with a Bus Pirate, to transmit some SX1262 commands and read the responses: http://dangerousprototypes.com/docs/I2C
+
 # I2C-To-SPI Bridge
 
-From https://github.com/zschroeder6212/tiny-i2c-spi/blob/master/src/main.c
+Arduino Source Code: https://github.com/zschroeder6212/tiny-i2c-spi/blob/master/src/main.c
 
 The bridge runs at I2C Address 0x28:
 
