@@ -90,7 +90,8 @@ Scan I2C bus:
 I2C scan results:
 
 ```text
-TODO
+Searching I2C address space. Found devices at:
+0x00 (0x00 W) 0x01 (0x00
 ```
 
 __Problem: Bus Pirate hangs while scanning. And I2C Address of LoRa Backplate should be 0x28, not 0x00. Why?__
