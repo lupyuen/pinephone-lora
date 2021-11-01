@@ -191,4 +191,4 @@ __Problem: `i2cdetect` fails to detect the I2C address of the LoRa Backplate. Wh
 
 Has the LoRa Backplate been flashed with the right firmware?
 
-(I2C-To-SPI Bridge on ATtiny84)
+I2C-To-SPI Bridge on ATtiny84: https://github.com/zschroeder6212/tiny-i2c-spi
