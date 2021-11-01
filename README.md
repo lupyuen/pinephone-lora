@@ -220,7 +220,7 @@ Has the LoRa Backplate been flashed with the right firmware?
 
 I2C-To-SPI Bridge on ATtiny84: https://github.com/zschroeder6212/tiny-i2c-spi
 
-LoRa Backplate also doesn't appear when we scan the other I2C Buses:
+LoRa Backplate doesn't appear when we scan I2C Buses 0 to 5:
 
 ```bash
 [manjaro@manjaro-arm ~]$ sudo i2cdetect 0
