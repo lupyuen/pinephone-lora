@@ -4,9 +4,21 @@
 
 Follow the updates on Twitter: https://twitter.com/MisterTechBlog/status/1454200499247349760
 
-Schematic and Firmware: https://wiki.pine64.org/wiki/Pinedio#Pinephone_backplate
+LoRa Backplate for PinePhone consists of...
 
-PinePhone I2C Port: https://wiki.pine64.org/index.php/PinePhone#Pogo_pins
+-   Semtech SX1262 LoRa Transceiver (SPI) and antenna
+
+    https://www.semtech.com/products/wireless-rf/lora-core/sx1262
+
+-   I2C Connector that matches the I2C Port (Pogo Pins) on PinePhone
+
+    https://wiki.pine64.org/index.php/PinePhone#Pogo_pins
+
+-   I2C-To-SPI Bridge (ATtiny84) that connects the I2C Connector to the LoRa Transceiver (SPI)
+
+    https://github.com/zschroeder6212/tiny-i2c-spi
+
+Schematic: https://wiki.pine64.org/wiki/Pinedio#Pinephone_backplate
 
 # I2C-To-SPI Bridge
 
