@@ -128,7 +128,10 @@ Read Address 0x28:
 Returns:
 
 ```text
-TODO
+I2C START BIT
+WRITE: 0x51 ACK 
+READ: 0x00 
+NACK
 ```
 
 __Problem: Bus Pirate hangs while reading from LoRa Backplate. Why?__
