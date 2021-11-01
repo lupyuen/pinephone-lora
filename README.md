@@ -151,7 +151,7 @@ P
 
 # Test LoRa Backplate on PinePhone
 
-On PinePhone with Manjaro Phosh, `i2cdetect` fails to detect the I2C address of the LoRa Backplate:
+On PinePhone with Manjaro Phosh, scanning the I2C Bus with `i2cdetect`:
 
 ```bash
 [manjaro@manjaro-arm ~]$ i2cdetect -l
@@ -177,3 +177,9 @@ Continue? [Y/n]
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 70: -- -- -- -- -- -- -- --
 ```
+
+__Problem: `i2cdetect` fails to detect the I2C address of the LoRa Backplate. Why?__
+
+Has the LoRa Backplate been flashed with the right firmware?
+
+(I2C-To-SPI Bridge on ATtiny84)
