@@ -167,7 +167,7 @@ Read I2C Address 0x00:
 
 Same problem as above.
 
-Same thing happens when we test the Breakout Board for LoRa Backplate...
+Same thing happens when we probe the Breakout Board for LoRa Backplate...
 
 ![Probing Breakout Board for LoRa Backplate](https://lupyuen.github.io/images/pinephone-breakout.jpg)
 
@@ -185,9 +185,11 @@ TODO: Write and Read I2C Address 0x00 Register 0x01?
 
 # Test LoRa Backplate on PinePhone
 
-On PinePhone with Manjaro Phosh, scanning the I2C Bus with `i2cdetect`:
+On PinePhone with Manjaro Phosh, scanning I2C Bus 3 with `i2cdetect`:
 
 ```bash
+[manjaro@manjaro-arm ~]$ sudo pacman -Syu i2c-tools
+
 [manjaro@manjaro-arm ~]$ i2cdetect -l
 i2c-0	unknown   	DesignWare HDMI                 	N/A
 i2c-1	unknown   	mv64xxx_i2c adapter             	N/A
@@ -217,3 +219,94 @@ __Problem: `i2cdetect` fails to detect the I2C address of the LoRa Backplate. Wh
 Has the LoRa Backplate been flashed with the right firmware?
 
 I2C-To-SPI Bridge on ATtiny84: https://github.com/zschroeder6212/tiny-i2c-spi
+
+LoRa Backplate also doesn't appear when we scan the other I2C Buses:
+
+```bash
+[manjaro@manjaro-arm ~]$ sudo i2cdetect 0
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-0.
+I will probe address range 0x08-0x77.
+Continue? [Y/n]
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: 30 -- 32 -- -- 35 -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+[manjaro@manjaro-arm ~]$ sudo i2cdetect 1
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-1.
+I will probe address range 0x08-0x77.
+Continue? [Y/n]
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- UU -- -- -- UU -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- UU -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+[manjaro@manjaro-arm ~]$ sudo i2cdetect 2
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-2.
+I will probe address range 0x08-0x77.
+Continue? [Y/n]
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- UU --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+[manjaro@manjaro-arm ~]$ sudo i2cdetect 3
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-3.
+I will probe address range 0x08-0x77.
+Continue? [Y/n]
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+[manjaro@manjaro-arm ~]$ sudo i2cdetect 4
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-4.
+I will probe address range 0x08-0x77.
+Continue? [Y/n]
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- UU -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- UU -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+[manjaro@manjaro-arm ~]$ sudo i2cdetect 5
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-5.
+I will probe address range 0x08-0x77.
+Continue? [Y/n]
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- UU --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+```
+
+![Scan I2C Bus on PinePhone](https://lupyuen.github.io/images/pinephone-scan.jpg)
