@@ -143,21 +143,26 @@ NACK
 
 __Problem: Bus Pirate hangs while reading from LoRa Backplate. Why?__
 
-TODO
+Read Address 0x20:
 
 ```text
 [0x41 r]
 ```
 
+Same problem as above.
+
+Read Address 0x00:
+
+```text
+[0x01 r]
+```
+
+Same problem as above.
+
 TODO: Write and Read Address 0x28 Register 0x01:
 
 ```text
 [0x50 0x01 0x00] [0x51 r]
-```
-
-TODO: Read Address 0x00?
-```text
-[0x01 r]
 ```
 
 TODO: Write and Read Address 0x00 Register 0x01?
