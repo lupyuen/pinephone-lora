@@ -309,4 +309,6 @@ Continue? [Y/n]
 70: -- -- -- -- -- -- -- --
 ```
 
+(Nope it can't be I2C Bus 2 because we're expecting an entire bus dedicated for the I2C Pogo Pins)
+
 ![Scan I2C Bus on PinePhone](https://lupyuen.github.io/images/pinephone-scan.jpg)
