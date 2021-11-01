@@ -79,7 +79,7 @@ void I2C_requested()
 
 `usi` functions are defined here: https://github.com/zschroeder6212/tiny-i2c-spi/blob/master/src/USI_TWI_Slave.c
 
-# Probing LoRa Backplate with Bus Pirate
+# Probe LoRa Backplate with Bus Pirate
 
 Based on:
 
@@ -148,3 +148,32 @@ P
 ```
 
 ![Probing LoRa Backplate with Bus Pirate](https://lupyuen.github.io/images/pinephone-probe.jpg)
+
+# Test LoRa Backplate on PinePhone
+
+On PinePhone with Manjaro Phosh, `i2cdetect` fails to detect the I2C address of the LoRa Backplate:
+
+```bash
+[manjaro@manjaro-arm ~]$ i2cdetect -l
+i2c-0	unknown   	DesignWare HDMI                 	N/A
+i2c-1	unknown   	mv64xxx_i2c adapter             	N/A
+i2c-2	unknown   	mv64xxx_i2c adapter             	N/A
+i2c-3	unknown   	mv64xxx_i2c adapter             	N/A
+i2c-4	unknown   	i2c-csi                         	N/A
+i2c-5	unknown   	i2c-2-mux (chan_id 0)           	N/A
+
+[manjaro@manjaro-arm ~]$ sudo i2cdetect 3
+WARNING! This program can confuse your I2C bus, cause data loss and worse!
+I will probe file /dev/i2c-3.
+I will probe address range 0x08-0x77.
+Continue? [Y/n]
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:                         -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
+```
