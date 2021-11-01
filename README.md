@@ -87,6 +87,15 @@ Based on:
 
 -   https://lupyuen.github.io/articles/i2c#appendix-test-bme280-with-bus-pirate
 
+Connect Bus Pirate to LoRa Backplate:
+
+| Bus Pirate Pin | Backplate Pin
+|:---:|:---:
+| __`MOSI`__ | `SDA`
+| __`CLK`__ | `SCL`
+| __`5V`__ | `USB-5V`
+| __`GND`__ | `GND`
+
 Enter I2C mode, power on:
 
 ```text
