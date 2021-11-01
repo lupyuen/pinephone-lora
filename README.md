@@ -81,6 +81,8 @@ void I2C_requested()
 
 # Probe LoRa Backplate with Bus Pirate
 
+![Probing LoRa Backplate with Bus Pirate](https://lupyuen.github.io/images/pinephone-probe.jpg)
+
 Based on:
 
 -   http://dangerousprototypes.com/docs/I2C
@@ -165,6 +167,10 @@ Read I2C Address 0x00:
 
 Same problem as above.
 
+Same thing happens when we test the Breakout Board for LoRa Backplate...
+
+![Probing Breakout Board for LoRa Backplate](https://lupyuen.github.io/images/pinephone-breakout.jpg)
+
 TODO: Write and Read I2C Address 0x28 Register 0x01:
 
 ```text
@@ -176,8 +182,6 @@ TODO: Write and Read I2C Address 0x00 Register 0x01?
 ```text
 [0x00 0x01 0x00] [0x01 r]
 ```
-
-![Probing LoRa Backplate with Bus Pirate](https://lupyuen.github.io/images/pinephone-probe.jpg)
 
 # Test LoRa Backplate on PinePhone
 
