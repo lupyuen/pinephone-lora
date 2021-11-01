@@ -117,6 +117,13 @@ Searching I2C address space. Found devices at:
 0x00 (0x00 W) 0x01 (0x00
 ```
 
+or
+
+```text
+Searching I2C address space. Found devices at:
+0x40(0x20 W) 0x41(0x20
+```
+
 __Problem: Bus Pirate hangs while scanning. And I2C Address of LoRa Backplate should be 0x28, not 0x00. Why?__
 
 Read Address 0x28:
@@ -135,6 +142,12 @@ NACK
 ```
 
 __Problem: Bus Pirate hangs while reading from LoRa Backplate. Why?__
+
+TODO
+
+```text
+[0x41 r]
+```
 
 TODO: Write and Read Address 0x28 Register 0x01:
 
