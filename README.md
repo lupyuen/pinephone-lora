@@ -153,12 +153,6 @@ TODO: Write and Read Address 0x00 Register 0x01?
 [0x00 0x01 0x00] [0x01 r]
 ```
 
-TODO: Enable pullup?
-
-```text
-P
-```
-
 ![Probing LoRa Backplate with Bus Pirate](https://lupyuen.github.io/images/pinephone-probe.jpg)
 
 # Test LoRa Backplate on PinePhone
