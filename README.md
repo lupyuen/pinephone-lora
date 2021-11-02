@@ -311,4 +311,10 @@ Continue? [Y/n]
 
 (Nope it can't be I2C Bus 2 because we're expecting an entire bus dedicated for the I2C Pogo Pins)
 
+Compare this with other PinePhone I2C devices:
+
+https://github.com/jnavarro7/pineeye_for_pinephone
+
+https://dev.to/pcvonz/i-c-on-the-pinephone-5090
+
 ![Scan I2C Bus on PinePhone](https://lupyuen.github.io/images/pinephone-scan.jpg)
