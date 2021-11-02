@@ -214,7 +214,7 @@ Continue? [Y/n]
 70: -- -- -- -- -- -- -- --
 ```
 
-__Problem: `i2cdetect` fails to detect the I2C Address (x28) of the LoRa Backplate. Why?__
+__Problem: `i2cdetect` fails to detect the I2C Address (0x28) of the LoRa Backplate. Why?__
 
 Has the LoRa Backplate been flashed with the right firmware?
 
