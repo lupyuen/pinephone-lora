@@ -22,6 +22,14 @@ Schematic: https://wiki.pine64.org/wiki/Pinedio#Pinephone_backplate
 
 Let's probe the LoRa Backplate with a Bus Pirate, to transmit some SX1262 commands and read the responses: http://dangerousprototypes.com/docs/I2C
 
+UPDATE: See these excellent articles by JF...
+
+-   ["First look at the LoRa backplate for the Pinephone"](https://codingfield.com/blog/2021-11/first-look-at-lora-pinephone-backplate/)
+
+-   ["Flashing the LoRa backplate for the PinePhone"](https://codingfield.com/blog/2021-11/flash-the-lora-pinephone-backplate/)
+
+-   ["A driver for the LoRa backplate for the PinePhone"](https://codingfield.com/blog/2021-11/a-driver-for-the-pinephone-lora-backplate/)
+
 # I2C-To-SPI Bridge
 
 Arduino Source Code: https://github.com/zschroeder6212/tiny-i2c-spi/blob/master/src/main.c
@@ -316,5 +324,13 @@ Compare this with other PinePhone I2C devices:
 https://github.com/jnavarro7/pineeye_for_pinephone
 
 https://dev.to/pcvonz/i-c-on-the-pinephone-5090
+
+UPDATE: See these excellent articles by JF...
+
+-   ["First look at the LoRa backplate for the Pinephone"](https://codingfield.com/blog/2021-11/first-look-at-lora-pinephone-backplate/)
+
+-   ["Flashing the LoRa backplate for the PinePhone"](https://codingfield.com/blog/2021-11/flash-the-lora-pinephone-backplate/)
+
+-   ["A driver for the LoRa backplate for the PinePhone"](https://codingfield.com/blog/2021-11/a-driver-for-the-pinephone-lora-backplate/)
 
 ![Scan I2C Bus on PinePhone](https://lupyuen.github.io/images/pinephone-scan.jpg)
